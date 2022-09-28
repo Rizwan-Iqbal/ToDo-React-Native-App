@@ -1,0 +1,190 @@
+{
+    "sourceFile": "components/Task.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 43,
+            "patches": [
+                {
+                    "date": 1663846183113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663846201937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const Task = () => {\r\n   return (\r\n     <View>\r\n-      <Text>Task</Text>\r\n+      <Text> This is Task</Text>\r\n     </View>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663846415655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import { View, Text } from 'react-native'\r\n import React from 'react'\r\n \r\n-const Task = () => {\r\n+const Task = (props) => {\r\n   return (\r\n     <View>\r\n-      <Text> This is Task</Text>\r\n+      <Text> {{props.name}}</Text>\r\n     </View>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663846435898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const Task = (props) => {\r\n   return (\r\n     <View>\r\n-      <Text> {{props.name}}</Text>\r\n+      <Text> {{this.props.name}}</Text>\r\n     </View>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663846458263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const Task = (props) => {\r\n   return (\r\n     <View>\r\n-      <Text> {{this.props.name}}</Text>\r\n+      <Text> {{props.name}}</Text>\r\n     </View>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663848187950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const Task = (props) => {\r\n   return (\r\n     <View>\r\n-      <Text> {{props.name}}</Text>\r\n+      <Text> {props.name}</Text>\r\n     </View>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663848648406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,14 @@\n import React from 'react'\r\n \r\n const Task = (props) => {\r\n   return (\r\n-    <View>\r\n+    <View style={item}>\r\n+        <View style={itemleft}>\r\n+\r\n+\r\n       <Text> {props.name}</Text>\r\n+        </View>\r\n     </View>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663848691037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n-import { View, Text } from 'react-native'\r\n+import { View, Text, TouchableOpacity } from 'react-native'\r\n import React from 'react'\r\n \r\n const Task = (props) => {\r\n   return (\r\n     <View style={item}>\r\n         <View style={itemleft}>\r\n \r\n-\r\n-      <Text> {props.name}</Text>\r\n+  <TouchableOpacity></TouchableOpacity>\r\n+      <Text style={itemText}> {props.name}</Text>\r\n         </View>\r\n     </View>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663848714604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\r\n     <View style={item}>\r\n         <View style={itemleft}>\r\n \r\n-  <TouchableOpacity></TouchableOpacity>\r\n+  <TouchableOpacity style={}></TouchableOpacity>\r\n       <Text style={itemText}> {props.name}</Text>\r\n         </View>\r\n     </View>\r\n   )\r\n"
+                },
+                {
+                    "date": 1663848758980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n import React from 'react'\r\n \r\n const Task = (props) => {\r\n   return (\r\n-    <View style={item}>\r\n-        <View style={itemleft}>\r\n+    <View style={styles.item}>\r\n+        <View style={styles.itemleft}>\r\n \r\n   <TouchableOpacity style={}></TouchableOpacity>\r\n-      <Text style={itemText}> {props.name}</Text>\r\n+      <Text style={styles.itemText}> {props.name}</Text>\r\n         </View>\r\n     </View>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1663848784395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,17 @@\n import { View, Text, TouchableOpacity } from 'react-native'\r\n import React from 'react'\r\n \r\n const Task = (props) => {\r\n-  return (\r\n-    <View style={styles.item}>\r\n-        <View style={styles.itemleft}>\r\n+    return (\r\n+        <View style={styles.item}>\r\n+            <View style={styles.itemleft}>\r\n \r\n-  <TouchableOpacity style={}></TouchableOpacity>\r\n-      <Text style={styles.itemText}> {props.name}</Text>\r\n+                <TouchableOpacity style={styles.square}></TouchableOpacity>\r\n+                <Text style={styles.itemText}> {props.name}</Text>\r\n+            </View>\r\n+            <View></View>\r\n         </View>\r\n-    </View>\r\n-  )\r\n+    )\r\n }\r\n \r\n export default Task\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663848802095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n                 <TouchableOpacity style={styles.square}></TouchableOpacity>\r\n                 <Text style={styles.itemText}> {props.name}</Text>\r\n             </View>\r\n-            <View></View>\r\n+            <View style={styles.circuler}></View>\r\n         </View>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1663848847803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,9 @@\n         </View>\r\n     )\r\n }\r\n \r\n+const styles=StyleSheet.create({\r\n+    \r\n+})\r\n+\r\n export default Task\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663848869648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,11 @@\n     )\r\n }\r\n \r\n const styles=StyleSheet.create({\r\n-    \r\n+    item:{\r\n+backg\r\n+    },\r\n+\r\n })\r\n \r\n export default Task\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663848889333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { View, Text, TouchableOpacity } from 'react-native'\r\n+import { View, Text, TouchableOpacity,StyleSheet } from 'react-native'\r\n import React from 'react'\r\n \r\n const Task = (props) => {\r\n     return (\r\n"
+                },
+                {
+                    "date": 1663848901972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { View, Text, TouchableOpacity,StyleSheet } from 'react-native'\r\n+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'\r\n import React from 'react'\r\n \r\n const Task = (props) => {\r\n     return (\r\n@@ -13,11 +13,11 @@\n         </View>\r\n     )\r\n }\r\n \r\n-const styles=StyleSheet.create({\r\n-    item:{\r\n-backg\r\n+const styles = StyleSheet.create({\r\n+    item: {\r\n+backgroundColor:with\r\n     },\r\n \r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1663848926977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n }\r\n \r\n const styles = StyleSheet.create({\r\n     item: {\r\n-backgroundColor:with\r\n+        backgroundColor: #FFFFFF,\r\n     },\r\n \r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1663848939227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n }\r\n \r\n const styles = StyleSheet.create({\r\n     item: {\r\n-        backgroundColor: #FFFFFF,\r\n+        backgroundColor: '#FFFFFF',\r\n     },\r\n \r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1663848967319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,10 @@\n \r\n const styles = StyleSheet.create({\r\n     item: {\r\n         backgroundColor: '#FFFFFF',\r\n+        padding:15,\r\n+        borderRadius:\r\n     },\r\n \r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1663848973813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n const styles = StyleSheet.create({\r\n     item: {\r\n         backgroundColor: '#FFFFFF',\r\n         padding:15,\r\n-        borderRadius:\r\n+        borderRadius:10,\r\n     },\r\n \r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1663849024593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n \r\n const styles = StyleSheet.create({\r\n     item: {\r\n         backgroundColor: '#FFFFFF',\r\n-        padding:15,\r\n-        borderRadius:10,\r\n+        padding: 15,\r\n+        borderRadius: 10,\r\n     },\r\n \r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1663849077944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,8 @@\n         backgroundColor: '#FFFFFF',\r\n         padding: 15,\r\n         borderRadius: 10,\r\n     },\r\n-\r\n+    \r\n })\r\n \r\n export default Task\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663849868170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,14 @@\n         backgroundColor: '#FFFFFF',\r\n         padding: 15,\r\n         borderRadius: 10,\r\n     },\r\n-    \r\n+    square:{\r\n+\r\n+        width:24,\r\n+        height:24,\r\n+        backfaceVisibility\r\n+    },\r\n+\r\n })\r\n \r\n export default Task\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663849893974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,10 @@\n     square:{\r\n \r\n         width:24,\r\n         height:24,\r\n-        backfaceVisibility\r\n+        background: rgba(85, 188, 246, 0.4),\r\n+        opacity:0.4,\r\n     },\r\n \r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1663849920313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     square:{\r\n \r\n         width:24,\r\n         height:24,\r\n-        background: rgba(85, 188, 246, 0.4),\r\n+        background: '#55BCF6',\r\n         opacity:0.4,\r\n     },\r\n \r\n })\r\n"
+                },
+                {
+                    "date": 1663849985134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,11 +18,12 @@\n     item: {\r\n         backgroundColor: '#FFFFFF',\r\n         padding: 15,\r\n         borderRadius: 10,\r\n-    },\r\n-    square:{\r\n+    }, \r\n \r\n+    square: {\r\n+\r\n         width:24,\r\n         height:24,\r\n         background: '#55BCF6',\r\n         opacity:0.4,\r\n"
+                },
+                {
+                    "date": 1663849994531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     square: {\r\n \r\n         width:24,\r\n         height:24,\r\n-        background: '#55BCF6',\r\n+        backgroundColor: '#55BCF6',\r\n         opacity:0.4,\r\n     },\r\n \r\n })\r\n"
+                },
+                {
+                    "date": 1663850023060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,13 @@\n         height:24,\r\n         backgroundColor: '#55BCF6',\r\n         opacity:0.4,\r\n     },\r\n+    itemleft: {\r\n \r\n+        flex:1,\r\n+        \r\n+    },\r\n+\r\n })\r\n \r\n export default Task\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663850075860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,10 +29,12 @@\n         opacity:0.4,\r\n     },\r\n     itemleft: {\r\n \r\n-        flex:1,\r\n-        \r\n+        flexDirection:'row',\r\n+        alignItems:'center',\r\n+        flexWrap:'wrap',\r\n+\r\n     },\r\n \r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1663850190403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,11 @@\n     item: {\r\n         backgroundColor: '#FFFFFF',\r\n         padding: 15,\r\n         borderRadius: 10,\r\n+        flexDirection: 'row',\r\n+        alignItems: 'center',\r\n+        justifyContent: 'space-between'\r\n     }, \r\n \r\n     square: {\r\n \r\n"
+                },
+                {
+                    "date": 1663850202547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,11 @@\n         alignItems:'center',\r\n         flexWrap:'wrap',\r\n \r\n     },\r\n+    circuler: {\r\n+        \r\n+    }\r\n \r\n })\r\n \r\n export default Task\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663850233668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,10 @@\n         padding: 15,\r\n         borderRadius: 10,\r\n         flexDirection: 'row',\r\n         alignItems: 'center',\r\n-        justifyContent: 'space-between'\r\n+        justifyContent: 'space-between',\r\n+        marginBottom:20,\r\n     }, \r\n \r\n     square: {\r\n \r\n@@ -38,9 +39,9 @@\n         flexWrap:'wrap',\r\n \r\n     },\r\n     circuler: {\r\n-        \r\n+\r\n     }\r\n \r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1663850304950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n         width:24,\r\n         height:24,\r\n         backgroundColor: '#55BCF6',\r\n         opacity:0.4,\r\n+        borderRadius:5,\r\n     },\r\n     itemleft: {\r\n \r\n         flexDirection:'row',\r\n"
+                },
+                {
+                    "date": 1663850346405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,9 @@\n \r\n         flexDirection:'row',\r\n         alignItems:'center',\r\n         flexWrap:'wrap',\r\n+        marginRight:15\r\n \r\n     },\r\n     circuler: {\r\n \r\n"
+                },
+                {
+                    "date": 1663850366595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,15 +31,15 @@\n         height:24,\r\n         backgroundColor: '#55BCF6',\r\n         opacity:0.4,\r\n         borderRadius:5,\r\n+        marginRight:15,\r\n     },\r\n     itemleft: {\r\n \r\n         flexDirection:'row',\r\n         alignItems:'center',\r\n         flexWrap:'wrap',\r\n-        marginRight:15\r\n \r\n     },\r\n     circuler: {\r\n \r\n"
+                },
+                {
+                    "date": 1663850451001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         height:24,\r\n         backgroundColor: '#55BCF6',\r\n         opacity:0.4,\r\n         borderRadius:5,\r\n-        marginRight:15,\r\n+        marginRight:5,\r\n     },\r\n     itemleft: {\r\n \r\n         flexDirection:'row',\r\n@@ -42,9 +42,12 @@\n \r\n     },\r\n     circuler: {\r\n \r\n-    }\r\n+    },\r\n+    itemText: {\r\n+        maxWidth:'80%',\r\n+    },\r\n \r\n })\r\n \r\n export default Task\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663850467334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     circuler: {\r\n \r\n     },\r\n     itemText: {\r\n-        maxWidth:'80%',\r\n+        maxWidth:'100%',\r\n     },\r\n \r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1663850475213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     circuler: {\r\n \r\n     },\r\n     itemText: {\r\n-        maxWidth:'100%',\r\n+        // maxWidth:'80%',\r\n     },\r\n \r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1663850558818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,11 @@\n         flexWrap:'wrap',\r\n \r\n     },\r\n     circuler: {\r\n+        width:12,\r\n+        height:12,\r\n+        borderColor:\r\n \r\n     },\r\n     itemText: {\r\n         // maxWidth:'80%',\r\n"
+                },
+                {
+                    "date": 1663850582570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,10 @@\n     },\r\n     circuler: {\r\n         width:12,\r\n         height:12,\r\n-        borderColor:\r\n+        borderColor:' #55BCF6',\r\n+        \r\n \r\n     },\r\n     itemText: {\r\n         // maxWidth:'80%',\r\n"
+                },
+                {
+                    "date": 1663850596518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     circuler: {\r\n         width:12,\r\n         height:12,\r\n         borderColor:' #55BCF6',\r\n-        \r\n+        borderWidth:2,\r\n \r\n     },\r\n     itemText: {\r\n         // maxWidth:'80%',\r\n"
+                },
+                {
+                    "date": 1663850654721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,12 +41,12 @@\n         flexWrap:'wrap',\r\n \r\n     },\r\n     circuler: {\r\n-        width:12,\r\n-        height:12,\r\n-        borderColor:' #55BCF6',\r\n-        borderWidth:2,\r\n+        width: 12,\r\n+        height: 12,\r\n+        borderColor: '#55BCF6',\r\n+        borderWidth: 2,\r\n \r\n     },\r\n     itemText: {\r\n         // maxWidth:'80%',\r\n"
+                },
+                {
+                    "date": 1663850668004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,8 +45,9 @@\n         width: 12,\r\n         height: 12,\r\n         borderColor: '#55BCF6',\r\n         borderWidth: 2,\r\n+        borderRadius: 5,\r\n \r\n     },\r\n     itemText: {\r\n         // maxWidth:'80%',\r\n"
+                },
+                {
+                    "date": 1663915743562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <View style={styles.item}>\r\n             <View style={styles.itemleft}>\r\n \r\n                 <TouchableOpacity style={styles.square}></TouchableOpacity>\r\n-                <Text style={styles.itemText}> {props.name}</Text>\r\n+                <Text style={styles.itemText}> {props.text}</Text>\r\n             </View>\r\n             <View style={styles.circuler}></View>\r\n         </View>\r\n     )\r\n"
+                }
+            ],
+            "date": 1663846183113,
+            "name": "Commit-0",
+            "content": "import { View, Text } from 'react-native'\r\nimport React from 'react'\r\n\r\nconst Task = () => {\r\n  return (\r\n    <View>\r\n      <Text>Task</Text>\r\n    </View>\r\n  )\r\n}\r\n\r\nexport default Task"
+        }
+    ]
+}

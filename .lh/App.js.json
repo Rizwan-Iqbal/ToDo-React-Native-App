@@ -1,0 +1,574 @@
+{
+    "sourceFile": "App.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 139,
+            "patches": [
+                {
+                    "date": 1663845356626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663845555541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,7 @@\n const styles = StyleSheet.create({\n   container: {\n     flex: 1,\n     backgroundColor: '#fff',\n-    alignItems: 'center',\n-    justifyContent: 'center',\n+   \n   },\n });\n"
+                },
+                {
+                    "date": 1663845566031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n \n const styles = StyleSheet.create({\n   container: {\n     flex: 1,\n-    backgroundColor: '#fff',\n+    backgroundColor: '#E8EAED',\n    \n   },\n });\n"
+                },
+                {
+                    "date": 1663845729087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,14 @@\n export default function App() {\n   return (\n     <View style={styles.container}>\n       <Text>Open up App.js to start working oszsssan your app!</Text>\n-      <StatusBar style=\"auto\" />\n+      {/* <StatusBar style=\"auto\" /> */}\n+\n+      <view>\n+\n+        \n+      </view>\n     </View>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1663845735357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,12 +6,12 @@\n     <View style={styles.container}>\n       <Text>Open up App.js to start working oszsssan your app!</Text>\n       {/* <StatusBar style=\"auto\" /> */}\n \n-      <view>\n+      <View>\n \n-        \n-      </view>\n+\n+      </View>\n     </View>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1663845748780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n       {/* <StatusBar style=\"auto\" /> */}\n \n       <View>\n \n+        <Text></Text>\n \n       </View>\n     </View>\n   );\n@@ -18,7 +19,7 @@\n const styles = StyleSheet.create({\n   container: {\n     flex: 1,\n     backgroundColor: '#E8EAED',\n-   \n+\n   },\n });\n"
+                },
+                {
+                    "date": 1663845773695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,14 +3,14 @@\n \n export default function App() {\n   return (\n     <View style={styles.container}>\n-      <Text>Open up App.js to start working oszsssan your app!</Text>\n+      {/* <Text>Open up App.js to start working oszsssan your app!</Text> */}\n       {/* <StatusBar style=\"auto\" /> */}\n \n-      <View>\n+      <View >\n \n-        <Text></Text>\n+        <Text> Today's  Tasks</Text>\n \n       </View>\n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663845792979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     <View style={styles.container}>\n       {/* <Text>Open up App.js to start working oszsssan your app!</Text> */}\n       {/* <StatusBar style=\"auto\" /> */}\n \n-      <View >\n+      <View style={styles.taskWrapper}>\n \n         <Text> Today's  Tasks</Text>\n \n       </View>\n"
+                },
+                {
+                    "date": 1663845813570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,16 @@\n     <View style={styles.container}>\n       {/* <Text>Open up App.js to start working oszsssan your app!</Text> */}\n       {/* <StatusBar style=\"auto\" /> */}\n \n-      <View style={styles.taskWrapper}>\n+      <View style={styles.tasksWrapper}>\n \n         <Text> Today's  Tasks</Text>\n \n       </View>\n+      <View>\n+        \n+      </View>\n     </View>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1663845831965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n \n         <Text> Today's  Tasks</Text>\n \n       </View>\n-      <View>\n-        \n+      <View style={styles.items}>\n+\n       </View>\n     </View>\n   );\n }\n"
+                },
+                {
+                    "date": 1663845876313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,5 +24,11 @@\n     flex: 1,\n     backgroundColor: '#E8EAED',\n \n   },\n+  tasksWrapper:{\n+\n+  },\n+  items:{\n+\n+  }\n });\n"
+                },
+                {
+                    "date": 1663845901072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n     backgroundColor: '#E8EAED',\n \n   },\n   tasksWrapper:{\n+    paddingTop:\n \n   },\n   items:{\n \n"
+                },
+                {
+                    "date": 1663845917330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,10 @@\n     backgroundColor: '#E8EAED',\n \n   },\n   tasksWrapper:{\n-    paddingTop:\n+    paddingTop:80,\n+    paddingHorizontal:20,\n \n   },\n   items:{\n \n"
+                },
+                {
+                    "date": 1663845941844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n       {/* <StatusBar style=\"auto\" /> */}\n \n       <View style={styles.tasksWrapper}>\n \n-        <Text> Today's  Tasks</Text>\n+        <Text style={styles.title}> Today's  Tasks</Text>\n \n       </View>\n       <View style={styles.items}>\n \n"
+                },
+                {
+                    "date": 1663845960564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n       {/* <StatusBar style=\"auto\" /> */}\n \n       <View style={styles.tasksWrapper}>\n \n-        <Text style={styles.title}> Today's  Tasks</Text>\n+        <Text style={styles.sectionTitle}> Today's  Tasks</Text>\n \n       </View>\n       <View style={styles.items}>\n \n"
+                },
+                {
+                    "date": 1663846004342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,11 @@\n     paddingTop:80,\n     paddingHorizontal:20,\n \n   },\n+  sectionTitle: {\n+\n+  }\n   items:{\n \n   }\n });\n"
+                },
+                {
+                    "date": 1663846032100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,10 @@\n     paddingHorizontal:20,\n \n   },\n   sectionTitle: {\n+    fontSize:24,\n+    fontWeight:700,\n \n   }\n   items:{\n \n"
+                },
+                {
+                    "date": 1663846042980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n   sectionTitle: {\n     fontSize:24,\n     fontWeight:700,\n \n-  }\n-  items:{\n+  },\n+  items: {\n \n   }\n });\n"
+                },
+                {
+                    "date": 1663846065654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \n   },\n   sectionTitle: {\n     fontSize:24,\n-    fontWeight:700,\n+    fontWeight:\"bold\",\n \n   },\n   items: {\n \n"
+                },
+                {
+                    "date": 1663846090353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n       {/* <StatusBar style=\"auto\" /> */}\n \n       <View style={styles.tasksWrapper}>\n \n-        <Text style={styles.sectionTitle}> Today's  Tasks</Text>\n+        <Text style={styles.sectionTitle}> Today's Tasks</Text>\n \n       </View>\n       <View style={styles.items}>\n \n"
+                },
+                {
+                    "date": 1663846236458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { StatusBar } from 'expo-status-bar';\n import { StyleSheet, Text, View } from 'react-native';\n+import Task from './components/Task';\n \n export default function App() {\n   return (\n     <View style={styles.container}>\n@@ -13,8 +14,10 @@\n \n       </View>\n       <View style={styles.items}>\n \n+        <Task />\n+\n       </View>\n     </View>\n   );\n }\n"
+                },
+                {
+                    "date": 1663846265905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \n       </View>\n       <View style={styles.items}>\n \n-        <Task />\n+        <Task /> \n \n       </View>\n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663846337761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \n       </View>\n       <View style={styles.items}>\n \n-        <Task /> \n+        <Task  name={This is my task}/> \n \n       </View>\n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663846361790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \n       </View>\n       <View style={styles.items}>\n \n-        <Task  name={This is my task}/> \n+        <Task  name={{\"This is Task\"}}/> \n \n       </View>\n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663846370374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \n       </View>\n       <View style={styles.items}>\n \n-        <Task  name={{\"This is Task\"}}/> \n+        <Task  name={\"This is Task\"}/> \n \n       </View>\n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663846379218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \n       </View>\n       <View style={styles.items}>\n \n-        <Task  name={\"This is Task\"}/> \n+        <Task name={\"This is Task\"}/> \n \n       </View>\n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663848281288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,14 @@\n \n       </View>\n       <View style={styles.items}>\n \n-        <Task name={\"This is Task\"}/> \n+        <Task name={\"This is my Task\"}/> \n+        <Task name={\"This is my Task\"}/> \n+        <Task name={\"This is my Task\"}/> \n+        <Task name={\"This is my Task\"}/> \n \n+\n       </View>\n     </View>\n   );\n }\n"
+                },
+                {
+                    "date": 1663848292907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,11 +15,11 @@\n       </View>\n       <View style={styles.items}>\n \n         <Task name={\"This is my Task\"}/> \n-        <Task name={\"This is my Task\"}/> \n-        <Task name={\"This is my Task\"}/> \n-        <Task name={\"This is my Task\"}/> \n+        <Task name={\"This is my Task1\"}/> \n+        <Task name={\"This is my Task2\"}/> \n+        <Task name={\"This is my Task3\"}/> \n \n \n       </View>\n     </View>\n"
+                },
+                {
+                    "date": 1663848300043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,13 +15,9 @@\n       </View>\n       <View style={styles.items}>\n \n         <Task name={\"This is my Task\"}/> \n-        <Task name={\"This is my Task1\"}/> \n-        <Task name={\"This is my Task2\"}/> \n-        <Task name={\"This is my Task3\"}/> \n \n-\n       </View>\n     </View>\n   );\n }\n"
+                },
+                {
+                    "date": 1663849050827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n \n       </View>\n       <View style={styles.items}>\n \n-        <Task name={\"This is my Task\"}/> \n+        <Task name={\"This is my Task1\"}/> \n+        <Task name={\"This is my Task2\"}/> \n \n       </View>\n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663849248544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,7 +39,7 @@\n     fontWeight:\"bold\",\n \n   },\n   items: {\n-\n+margin:10,\n   }\n });\n"
+                },
+                {
+                    "date": 1663849255365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,7 +39,7 @@\n     fontWeight:\"bold\",\n \n   },\n   items: {\n-margin:10,\n+margin:20,\n   }\n });\n"
+                },
+                {
+                    "date": 1663849292484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n \n       </View>\n       <View style={styles.items}>\n \n-        <Task name={\"This is my Task1\"}/> \n-        <Task name={\"This is my Task2\"}/> \n+        <Task name={\"This is my Task1\"} />\n+        <Task name={\"This is my Task2\"} />\n \n       </View>\n     </View>\n   );\n@@ -28,18 +28,18 @@\n     flex: 1,\n     backgroundColor: '#E8EAED',\n \n   },\n-  tasksWrapper:{\n-    paddingTop:80,\n-    paddingHorizontal:20,\n+  tasksWrapper: {\n+    paddingTop: 80,\n+    paddingHorizontal: 20,\n \n   },\n   sectionTitle: {\n-    fontSize:24,\n-    fontWeight:\"bold\",\n+    fontSize: 24,\n+    fontWeight: \"bold\",\n \n   },\n   items: {\n-margin:20,\n+    margin: 20,\n   }\n });\n"
+                },
+                {
+                    "date": 1663849321219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,6 +40,7 @@\n \n   },\n   items: {\n     margin: 20,\n+    marginBottom:10,\n   }\n });\n"
+                },
+                {
+                    "date": 1663849331631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n \n   },\n   items: {\n     margin: 20,\n-    marginBottom:10,\n+    marginBottom:100,\n   }\n });\n"
+                },
+                {
+                    "date": 1663849340218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,7 +40,7 @@\n \n   },\n   items: {\n     margin: 20,\n-    marginBottom:100,\n+\n   }\n });\n"
+                },
+                {
+                    "date": 1663849528761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,16 +10,16 @@\n \n       <View style={styles.tasksWrapper}>\n \n         <Text style={styles.sectionTitle}> Today's Tasks</Text>\n+        <View style={styles.items}>\n \n+          <Task name={\"This is my Task1\"} />\n+          <Task name={\"This is my Task2\"} />\n+\n+        </View>\n       </View>\n-      <View style={styles.items}>\n \n-        <Task name={\"This is my Task1\"} />\n-        <Task name={\"This is my Task2\"} />\n-\n-      </View>\n     </View>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1663849535559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,8 @@\n     fontWeight: \"bold\",\n \n   },\n   items: {\n-    margin: 20,\n+  \n \n   }\n });\n"
+                },
+                {
+                    "date": 1663850753685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,8 @@\n     fontWeight: \"bold\",\n \n   },\n   items: {\n-  \n+  marginTop:30,\n \n   }\n });\n"
+                },
+                {
+                    "date": 1663851263370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { StatusBar } from 'expo-status-bar';\n-import { StyleSheet, Text, View } from 'react-native';\n+import { KeyboardAvoidingView, StyleSheet, Text, View } from 'react-native';\n import Task from './components/Task';\n \n export default function App() {\n   return (\n@@ -18,8 +18,12 @@\n \n         </View>\n       </View>\n \n+      <KeyboardAvoidingView>\n+\n+      </KeyboardAvoidingView>\n+\n     </View>\n   );\n }\n \n@@ -39,8 +43,8 @@\n     fontWeight: \"bold\",\n \n   },\n   items: {\n-  marginTop:30,\n+    marginTop: 30,\n \n   }\n });\n"
+                },
+                {
+                    "date": 1663851276283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         </View>\n       </View>\n \n       <KeyboardAvoidingView>\n-\n+  behavior=\n       </KeyboardAvoidingView>\n \n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663851310742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         </View>\n       </View>\n \n       <KeyboardAvoidingView>\n-  behavior=\n+        behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n       </KeyboardAvoidingView>\n \n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663851326877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n       </View>\n \n       <KeyboardAvoidingView>\n         behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n+        <input></input>\n       </KeyboardAvoidingView>\n \n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663851370226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,11 @@\n \n         </View>\n       </View>\n \n-      <KeyboardAvoidingView>\n-        behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n+      <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n+      >\n+\n         <input></input>\n       </KeyboardAvoidingView>\n \n     </View>\n"
+                },
+                {
+                    "date": 1663851415491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         </View>\n       </View>\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n-      >\n+     style={styles.writeTaskWrapper}  >\n \n         <input></input>\n       </KeyboardAvoidingView>\n \n"
+                },
+                {
+                    "date": 1663851437397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { StatusBar } from 'expo-status-bar';\n-import { KeyboardAvoidingView, StyleSheet, Text, View } from 'react-native';\n+import { KeyboardAvoidingView, StyleSheet, Text, TextInput, View } from 'react-native';\n import Task from './components/Task';\n \n export default function App() {\n   return (\n@@ -21,9 +21,9 @@\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n      style={styles.writeTaskWrapper}  >\n \n-        <input></input>\n+        <TextInput></TextInput>\n       </KeyboardAvoidingView>\n \n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663851462893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n      style={styles.writeTaskWrapper}  >\n \n-        <TextInput></TextInput>\n+        <TextInput style={styles.input}></TextInput>\n       </KeyboardAvoidingView>\n \n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663851487678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n      style={styles.writeTaskWrapper}  >\n \n-        <TextInput style={styles.input}></TextInput>\n+        <TextInput style={styles.input} placeholder='Enter Task Here'/>\n       </KeyboardAvoidingView>\n \n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663851529511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n      style={styles.writeTaskWrapper}  >\n \n-        <TextInput style={styles.input} placeholder='Enter Task Here'/>\n+        <TextInput style={styles.input} placeholder='Write a Task'/>\n       </KeyboardAvoidingView>\n \n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663851570284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n         </View>\n       </View>\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n-     style={styles.writeTaskWrapper}  >\n+        style={styles.writeTaskWrapper}  >\n \n-        <TextInput style={styles.input} placeholder='Write a Task'/>\n+        <TextInput style={styles.input} placeholder='Write a Task' />\n       </KeyboardAvoidingView>\n \n     </View>\n   );\n"
+                },
+                {
+                    "date": 1663851652562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { StatusBar } from 'expo-status-bar';\n-import { KeyboardAvoidingView, StyleSheet, Text, TextInput, View } from 'react-native';\n+import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';\n import Task from './components/Task';\n \n export default function App() {\n   return (\n@@ -23,9 +23,16 @@\n         style={styles.writeTaskWrapper}  >\n \n         <TextInput style={styles.input} placeholder='Write a Task' />\n       </KeyboardAvoidingView>\n+      <TouchableOpacity>\n+        <View>\n+          <Text>\n \n+          </Text>\n+        </View>\n+      </TouchableOpacity>\n+\n     </View>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1663851682317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,10 @@\n         <TextInput style={styles.input} placeholder='Write a Task' />\n       </KeyboardAvoidingView>\n       <TouchableOpacity>\n         <View>\n-          <Text>\n+          <Text style={styles.addWrapper}>\n++\n \n           </Text>\n         </View>\n       </TouchableOpacity>\n"
+                },
+                {
+                    "date": 1663851693427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n       </KeyboardAvoidingView>\n       <TouchableOpacity>\n         <View>\n           <Text style={styles.addWrapper}>\n-+\n+            +\n \n           </Text>\n         </View>\n       </TouchableOpacity>\n"
+                },
+                {
+                    "date": 1663851728599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \n         <TextInput style={styles.input} placeholder='Write a Task' />\n       </KeyboardAvoidingView>\n       <TouchableOpacity>\n-        <View>\n+        <View style={styles.addWrapper}>\n           <Text style={styles.addWrapper}>\n             +\n \n           </Text>\n"
+                },
+                {
+                    "date": 1663851736555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n         <TextInput style={styles.input} placeholder='Write a Task' />\n       </KeyboardAvoidingView>\n       <TouchableOpacity>\n         <View style={styles.addWrapper}>\n-          <Text style={styles.addWrapper}>\n+          <Text style={styles.addText}>\n             +\n \n           </Text>\n         </View>\n"
+                },
+                {
+                    "date": 1663851906337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,6 +55,12 @@\n   },\n   items: {\n     marginTop: 30,\n \n+  },\n+  addWrapper: {\n+    position: 'absolute',\n+    width: '100%',\n+    justifyContent: 'space-around',\n+    flexDirection:'row',\n   }\n });\n"
+                },
+                {
+                    "date": 1663851921576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,11 @@\n \n   },\n   addWrapper: {\n     position: 'absolute',\n+    bottom:60,\n     width: '100%',\n     justifyContent: 'space-around',\n     flexDirection:'row',\n+    \n   }\n });\n"
+                },
+                {
+                    "date": 1663851951933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n   items: {\n     marginTop: 30,\n \n   },\n-  addWrapper: {\n+  writeTaskWrapper: {\n     position: 'absolute',\n     bottom:60,\n     width: '100%',\n     justifyContent: 'space-around',\n"
+                },
+                {
+                    "date": 1663851996731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,7 +62,8 @@\n     bottom:60,\n     width: '100%',\n     justifyContent: 'space-around',\n     flexDirection:'row',\n+    alignItems:'center',\n     \n   }\n });\n"
+                },
+                {
+                    "date": 1663852200891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,6 +64,12 @@\n     justifyContent: 'space-around',\n     flexDirection:'row',\n     alignItems:'center',\n     \n+  },\n+  input:{\n+    paddingVertical:15,\n+    paddingHorizontal:15,\n+    backgroundColor: 'white',\n+    \n   }\n });\n"
+                },
+                {
+                    "date": 1663852214168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,7 +69,7 @@\n   input:{\n     paddingVertical:15,\n     paddingHorizontal:15,\n     backgroundColor: 'white',\n-    \n+    width:250,\n   }\n });\n"
+                },
+                {
+                    "date": 1663852296212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,6 +70,7 @@\n     paddingVertical:15,\n     paddingHorizontal:15,\n     backgroundColor: 'white',\n     width:250,\n+    \n   }\n });\n"
+                },
+                {
+                    "date": 1663852308668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,7 +70,7 @@\n     paddingVertical:15,\n     paddingHorizontal:15,\n     backgroundColor: 'white',\n     width:250,\n-    \n+    borderRadius:60,\n   }\n });\n"
+                },
+                {
+                    "date": 1663852334188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n   writeTaskWrapper: {\n     position: 'absolute',\n     bottom:60,\n     width: '100%',\n-    justifyContent: 'space-around',\n+    justifyContent: 'space-between',\n     flexDirection:'row',\n     alignItems:'center',\n     \n   },\n"
+                },
+                {
+                    "date": 1663852374399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,6 +71,7 @@\n     paddingHorizontal:15,\n     backgroundColor: 'white',\n     width:250,\n     borderRadius:60,\n+    borderColor: '#'\n   }\n });\n"
+                },
+                {
+                    "date": 1663852382617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,7 +71,7 @@\n     paddingHorizontal:15,\n     backgroundColor: 'white',\n     width:250,\n     borderRadius:60,\n-    borderColor: '#'\n+    borderColor: '#C0C0C0'\n   }\n });\n"
+                },
+                {
+                    "date": 1663852407393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,6 +72,7 @@\n     backgroundColor: 'white',\n     width:250,\n     borderRadius:60,\n     borderColor: '#C0C0C0'\n+    borderWidth:1\n   }\n });\n"
+                },
+                {
+                    "date": 1663852424852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,7 +72,7 @@\n     backgroundColor: 'white',\n     width:250,\n     borderRadius:60,\n     borderColor: '#C0C0C0'\n-    borderWidth:1\n+    border\n   }\n });\n"
+                },
+                {
+                    "date": 1663852436262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,7 +72,7 @@\n     backgroundColor: 'white',\n     width:250,\n     borderRadius:60,\n     borderColor: '#C0C0C0'\n-    border\n+    borderWidth: 1,\n   }\n });\n"
+                },
+                {
+                    "date": 1663912544087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,8 +71,13 @@\n     paddingHorizontal:15,\n     backgroundColor: 'white',\n     width:250,\n     borderRadius:60,\n-    borderColor: '#C0C0C0'\n+    borderColor: '#C0C0C0',\n     borderWidth: 1,\n+  },\n+  addWrapper:{\n+    width:60,\n+    height:60,\n+    backgroundColor:\n   }\n });\n"
+                },
+                {
+                    "date": 1663912603021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,7 +77,8 @@\n   },\n   addWrapper:{\n     width:60,\n     height:60,\n-    backgroundColor:\n+    backgroundColor:'#FFFFFF',\n+    borderRadius:60,\n   }\n });\n"
+                },
+                {
+                    "date": 1663912623674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,6 +79,8 @@\n     width:60,\n     height:60,\n     backgroundColor:'#FFFFFF',\n     borderRadius:60,\n+    justifyContent:'center',\n+    alignItems:'center',\n   }\n });\n"
+                },
+                {
+                    "date": 1663912691773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,17 +22,18 @@\n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n         style={styles.writeTaskWrapper}  >\n \n         <TextInput style={styles.input} placeholder='Write a Task' />\n-      </KeyboardAvoidingView>\n+      \n       <TouchableOpacity>\n         <View style={styles.addWrapper}>\n           <Text style={styles.addText}>\n             +\n \n           </Text>\n         </View>\n       </TouchableOpacity>\n+      </KeyboardAvoidingView>\n \n     </View>\n   );\n }\n"
+                },
+                {
+                    "date": 1663912715300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n   writeTaskWrapper: {\n     position: 'absolute',\n     bottom:60,\n     width: '100%',\n-    justifyContent: 'space-between',\n+    justifyContent: 'space-around',\n     flexDirection:'row',\n     alignItems:'center',\n     \n   },\n"
+                },
+                {
+                    "date": 1663913034145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';\n import Task from './components/Task';\n \n export default function App() {\n+  const (st, )\n   return (\n     <View style={styles.container}>\n       {/* <Text>Open up App.js to start working oszsssan your app!</Text> */}\n       {/* <StatusBar style=\"auto\" /> */}\n"
+                },
+                {
+                    "date": 1663913053749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import { StatusBar } from 'expo-status-bar';\n+import { useState } from 'react';\n import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';\n import Task from './components/Task';\n \n export default function App() {\n-  const (st, )\n+  const (task, setTask) = useState();\n   return (\n     <View style={styles.container}>\n       {/* <Text>Open up App.js to start working oszsssan your app!</Text> */}\n       {/* <StatusBar style=\"auto\" /> */}\n"
+                },
+                {
+                    "date": 1663913066891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';\n import Task from './components/Task';\n \n export default function App() {\n-  const (task, setTask) = useState();\n+  const [task, setTask] = useState();\n   return (\n     <View style={styles.container}>\n       {/* <Text>Open up App.js to start working oszsssan your app!</Text> */}\n       {/* <StatusBar style=\"auto\" /> */}\n"
+                },
+                {
+                    "date": 1663913106121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,11 @@\n import Task from './components/Task';\n \n export default function App() {\n   const [task, setTask] = useState();\n+  const handleAddTask=()=>{\n+\n+  }\n   return (\n     <View style={styles.container}>\n       {/* <Text>Open up App.js to start working oszsssan your app!</Text> */}\n       {/* <StatusBar style=\"auto\" /> */}\n"
+                },
+                {
+                    "date": 1663913122239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,12 @@\n import Task from './components/Task';\n \n export default function App() {\n   const [task, setTask] = useState();\n-  const handleAddTask=()=>{\n+  const handleAddTask = () => {\n \n+    console.log(first)\n+\n   }\n   return (\n     <View style={styles.container}>\n       {/* <Text>Open up App.js to start working oszsssan your app!</Text> */}\n"
+                },
+                {
+                    "date": 1663913150326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n export default function App() {\n   const [task, setTask] = useState();\n   const handleAddTask = () => {\n \n-    console.log(first)\n+    console.log(task)\n \n   }\n   return (\n     <View style={styles.container}>\n@@ -28,9 +28,9 @@\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n         style={styles.writeTaskWrapper}  >\n \n-        <TextInput style={styles.input} placeholder='Write a Task' />\n+        <TextInput style={styles.input} placeholder='Write a Task'  />\n       \n       <TouchableOpacity>\n         <View style={styles.addWrapper}>\n           <Text style={styles.addText}>\n"
+                },
+                {
+                    "date": 1663913161370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n         style={styles.writeTaskWrapper}  >\n \n-        <TextInput style={styles.input} placeholder='Write a Task'  />\n+        <TextInput style={styles.input} placeholder='Write a Task' onChangeText={} />\n       \n       <TouchableOpacity>\n         <View style={styles.addWrapper}>\n           <Text style={styles.addText}>\n"
+                },
+                {
+                    "date": 1663913213382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n         style={styles.writeTaskWrapper}  >\n \n-        <TextInput style={styles.input} placeholder='Write a Task' onChangeText={} />\n+        <TextInput style={styles.input} placeholder='Write a Task' onChangeText={text=> setTask(text)} />\n       \n       <TouchableOpacity>\n         <View style={styles.addWrapper}>\n           <Text style={styles.addText}>\n"
+                },
+                {
+                    "date": 1663913238692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n         style={styles.writeTaskWrapper}  >\n \n-        <TextInput style={styles.input} placeholder='Write a Task' onChangeText={text=> setTask(text)} />\n+        <TextInput style={styles.input} value={{}} placeholder='Write a Task' onChangeText={text=> setTask(text)} />\n       \n       <TouchableOpacity>\n         <View style={styles.addWrapper}>\n           <Text style={styles.addText}>\n"
+                },
+                {
+                    "date": 1663913268674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n         style={styles.writeTaskWrapper}  >\n \n-        <TextInput style={styles.input} value={{}} placeholder='Write a Task' onChangeText={text=> setTask(text)} />\n+        <TextInput style={styles.input} value={task} placeholder='Write a Task' onChangeText={text=> setTask(text)} />\n       \n       <TouchableOpacity>\n         <View style={styles.addWrapper}>\n           <Text style={styles.addText}>\n"
+                },
+                {
+                    "date": 1663913273956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n         </View>\n       </View>\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n-        style={styles.writeTaskWrapper}  >\n+        style={styles.writeTaskWrapper} >\n \n         <TextInput style={styles.input} value={task} placeholder='Write a Task' onChangeText={text=> setTask(text)} />\n       \n       <TouchableOpacity>\n"
+                },
+                {
+                    "date": 1663913330519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n         style={styles.writeTaskWrapper} >\n \n         <TextInput style={styles.input} value={task} placeholder='Write a Task' onChangeText={text=> setTask(text)} />\n       \n-      <TouchableOpacity>\n+      <TouchableOpacity onPress={()=>handleAddTask}>\n         <View style={styles.addWrapper}>\n           <Text style={styles.addText}>\n             +\n \n"
+                },
+                {
+                    "date": 1663913354235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n         style={styles.writeTaskWrapper} >\n \n         <TextInput style={styles.input} value={task} placeholder='Write a Task' onChangeText={text=> setTask(text)} />\n       \n-      <TouchableOpacity onPress={()=>handleAddTask}>\n+      <TouchableOpacity onPress={()=>handleAddTask()}>\n         <View style={styles.addWrapper}>\n           <Text style={styles.addText}>\n             +\n \n"
+                },
+                {
+                    "date": 1663914622529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n import Task from './components/Task';\n \n export default function App() {\n   const [task, setTask] = useState();\n+  const [taskItems, setTaskItems] = useState();\n+\n   const handleAddTask = () => {\n \n     console.log(task)\n \n"
+                },
+                {
+                    "date": 1663914663324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n   const [taskItems, setTaskItems] = useState();\n \n   const handleAddTask = () => {\n \n-    console.log(task)\n+    // console.log(task)\n+    \n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663914670048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n   const handleAddTask = () => {\n \n     // console.log(task)\n-    \n+    setTaskItems\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663914677830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n   const handleAddTask = () => {\n \n     // console.log(task)\n-    setTaskItems\n+    setTaskItems([-])\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663914693259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n   const handleAddTask = () => {\n \n     // console.log(task)\n-    setTaskItems([-])\n+    setTaskItems([...taskItems])\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663914702315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n   const handleAddTask = () => {\n \n     // console.log(task)\n-    setTaskItems([...taskItems])\n+    setTaskItems([...taskItems, task])\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663914744785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n   const handleAddTask = () => {\n \n     // console.log(task)\n     setTaskItems([...taskItems, task])\n+    setTask(null);\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663914850628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,9 @@\n \n         <Text style={styles.sectionTitle}> Today's Tasks</Text>\n         <View style={styles.items}>\n \n-          <Task name={\"This is my Task1\"} />\n-          <Task name={\"This is my Task2\"} />\n+ taskItems.map\n \n         </View>\n       </View>\n \n"
+                },
+                {
+                    "date": 1663914856025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n         <Text style={styles.sectionTitle}> Today's Tasks</Text>\n         <View style={styles.items}>\n \n- taskItems.map\n+ taskItems.map()\n \n         </View>\n       </View>\n \n"
+                },
+                {
+                    "date": 1663914868345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n         <Text style={styles.sectionTitle}> Today's Tasks</Text>\n         <View style={styles.items}>\n \n- taskItems.map()\n+ taskItems.map((item)=>)\n \n         </View>\n       </View>\n \n"
+                },
+                {
+                    "date": 1663914876372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,13 @@\n \n         <Text style={styles.sectionTitle}> Today's Tasks</Text>\n         <View style={styles.items}>\n \n- taskItems.map((item)=>)\n+ taskItems.map((item) => {\n \n+  \n+ })\n+\n         </View>\n       </View>\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n"
+                },
+                {
+                    "date": 1663914897560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n         <View style={styles.items}>\n \n  taskItems.map((item) => {\n \n-  \n+  return \n  })\n \n         </View>\n       </View>\n"
+                },
+                {
+                    "date": 1663914907154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n         <View style={styles.items}>\n \n  taskItems.map((item) => {\n \n-  return \n+  return </>\n  })\n \n         </View>\n       </View>\n"
+                },
+                {
+                    "date": 1663914926618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n         <View style={styles.items}>\n \n  taskItems.map((item) => {\n \n-  return </>\n+  return <Task text={item}/>\n  })\n \n         </View>\n       </View>\n"
+                },
+                {
+                    "date": 1663914957083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,29 +23,29 @@\n \n         <Text style={styles.sectionTitle}> Today's Tasks</Text>\n         <View style={styles.items}>\n \n- taskItems.map((item) => {\n+         taskItems.map((item) => {\n \n-  return <Task text={item}/>\n- })\n+            return <Task text={item} />\n+        })\n \n         </View>\n       </View>\n \n       <KeyboardAvoidingView behavior={Platform.OS === \"ios\" ? \"padding\" : \"height\"}\n         style={styles.writeTaskWrapper} >\n \n-        <TextInput style={styles.input} value={task} placeholder='Write a Task' onChangeText={text=> setTask(text)} />\n-      \n-      <TouchableOpacity onPress={()=>handleAddTask()}>\n-        <View style={styles.addWrapper}>\n-          <Text style={styles.addText}>\n-            +\n+        <TextInput style={styles.input} value={task} placeholder='Write a Task' onChangeText={text => setTask(text)} />\n \n-          </Text>\n-        </View>\n-      </TouchableOpacity>\n+        <TouchableOpacity onPress={() => handleAddTask()}>\n+          <View style={styles.addWrapper}>\n+            <Text style={styles.addText}>\n+              +\n+\n+            </Text>\n+          </View>\n+        </TouchableOpacity>\n       </KeyboardAvoidingView>\n \n     </View>\n   );\n@@ -72,29 +72,29 @@\n \n   },\n   writeTaskWrapper: {\n     position: 'absolute',\n-    bottom:60,\n+    bottom: 60,\n     width: '100%',\n     justifyContent: 'space-around',\n-    flexDirection:'row',\n-    alignItems:'center',\n-    \n+    flexDirection: 'row',\n+    alignItems: 'center',\n+\n   },\n-  input:{\n-    paddingVertical:15,\n-    paddingHorizontal:15,\n+  input: {\n+    paddingVertical: 15,\n+    paddingHorizontal: 15,\n     backgroundColor: 'white',\n-    width:250,\n-    borderRadius:60,\n+    width: 250,\n+    borderRadius: 60,\n     borderColor: '#C0C0C0',\n     borderWidth: 1,\n   },\n-  addWrapper:{\n-    width:60,\n-    height:60,\n-    backgroundColor:'#FFFFFF',\n-    borderRadius:60,\n-    justifyContent:'center',\n-    alignItems:'center',\n+  addWrapper: {\n+    width: 60,\n+    height: 60,\n+    backgroundColor: '#FFFFFF',\n+    borderRadius: 60,\n+    justifyContent: 'center',\n+    alignItems: 'center',\n   }\n });\n"
+                },
+                {
+                    "date": 1663914971671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,13 +22,15 @@\n       <View style={styles.tasksWrapper}>\n \n         <Text style={styles.sectionTitle}> Today's Tasks</Text>\n         <View style={styles.items}>\n+          {\n \n          taskItems.map((item) => {\n \n             return <Task text={item} />\n         })\n+      }\n \n         </View>\n       </View>\n \n"
+                },
+                {
+                    "date": 1663915056792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n   const handleAddTask = () => {\n \n     // console.log(task)\n-    setTaskItems([...taskItems, task])\n+    setTaskItems([taskItems, task])\n     setTask(null);\n \n   }\n   return (\n"
+                },
+                {
+                    "date": 1663915073677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n   const handleAddTask = () => {\n \n     // console.log(task)\n-    setTaskItems([taskItems, task])\n+    setTaskItems([...taskItems, task])\n     setTask(null);\n \n   }\n   return (\n"
+                },
+                {
+                    "date": 1663915103449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import Task from './components/Task';\n \n export default function App() {\n   const [task, setTask] = useState();\n-  const [taskItems, setTaskItems] = useState();\n+  const [taskItems, setTaskItems] = useState([]);\n \n   const handleAddTask = () => {\n \n     // console.log(task)\n"
+                },
+                {
+                    "date": 1663915143067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         <Text style={styles.sectionTitle}> Today's Tasks</Text>\n         <View style={styles.items}>\n           {\n \n-         taskItems.map((item) => {\n+         taskItems.map((item , index) => {\n \n             return <Task text={item} />\n         })\n       }\n"
+                },
+                {
+                    "date": 1663915171001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n           {\n \n          taskItems.map((item , index) => {\n \n-            return <Task text={item} />\n+            return <Task key={index} text={item} />\n         })\n       }\n \n         </View>\n"
+                },
+                {
+                    "date": 1663915885904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,17 @@\n import { StatusBar } from 'expo-status-bar';\n import { useState } from 'react';\n-import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';\n+import { Keyboard, KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';\n import Task from './components/Task';\n \n export default function App() {\n   const [task, setTask] = useState();\n   const [taskItems, setTaskItems] = useState([]);\n \n   const handleAddTask = () => {\n \n+    Keyboard.dismiss();\n+\n     // console.log(task)\n     setTaskItems([...taskItems, task])\n     setTask(null);\n \n"
+                },
+                {
+                    "date": 1663916134101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,12 @@\n     setTaskItems([...taskItems, task])\n     setTask(null);\n \n   }\n+\n+  const completeTask(){\n+    \n+  }\n   return (\n     <View style={styles.container}>\n       {/* <Text>Open up App.js to start working oszsssan your app!</Text> */}\n       {/* <StatusBar style=\"auto\" /> */}\n"
+                },
+                {
+                    "date": 1663916147077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n     setTask(null);\n \n   }\n \n-  const completeTask(){\n-    \n+  const completeTask(index){\n+\n   }\n   return (\n     <View style={styles.container}>\n       {/* <Text>Open up App.js to start working oszsssan your app!</Text> */}\n"
+                },
+                {
+                    "date": 1663916165748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     setTask(null);\n \n   }\n \n-  const completeTask(index){\n+  const completeTask=(index)=>{\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663916180992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     setTask(null);\n \n   }\n \n-  const completeTask=(index)=>{\n+  const completeTask = (index) => {\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663916197753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n \n   }\n \n   const completeTask = (index) => {\n+    let itemsCopy = {}\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663916203192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \n   }\n \n   const completeTask = (index) => {\n-    let itemsCopy = {}\n+    let itemsCopy = []\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663916211948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \n   }\n \n   const completeTask = (index) => {\n-    let itemsCopy = []\n+    let itemsCopy = [...taskItems]\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663916228655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,10 @@\n \n   }\n \n   const completeTask = (index) => {\n-    let itemsCopy = [...taskItems]\n+    let itemsCopy = [...taskItems];\n+    itemsCopy.splice\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663916242625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   }\n \n   const completeTask = (index) => {\n     let itemsCopy = [...taskItems];\n-    itemsCopy.splice\n+    itemsCopy.splice()\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663916253562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   }\n \n   const completeTask = (index) => {\n     let itemsCopy = [...taskItems];\n-    itemsCopy.splice()\n+    itemsCopy.splice(index, 1)\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663916267207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   }\n \n   const completeTask = (index) => {\n     let itemsCopy = [...taskItems];\n-    itemsCopy.splice(index, 1)\n+    itemsCopy.splice(index, 1);\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663916282428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n \n   const completeTask = (index) => {\n     let itemsCopy = [...taskItems];\n     itemsCopy.splice(index, 1);\n+    setTaskItems(itemsCopy);\n \n   }\n   return (\n     <View style={styles.container}>\n"
+                },
+                {
+                    "date": 1663916420878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,14 @@\n           {\n \n          taskItems.map((item , index) => {\n \n-            return <Task key={index} text={item} />\n+            return \n+            <TouchableOpacity onPress={()=>completeTask()}> \n+\n+               <Task key={index} text={item} />\n+\n+            </TouchableOpacity>\n         })\n       }\n \n         </View>\n"
+                },
+                {
+                    "date": 1663916450247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,11 +36,11 @@\n \n          taskItems.map((item , index) => {\n \n             return \n-            <TouchableOpacity onPress={()=>completeTask()}> \n+            <TouchableOpacity  key={index} onPress={()=>completeTask()}> \n \n-               <Task key={index} text={item} />\n+               <Task text={item} />\n \n             </TouchableOpacity>\n         })\n       }\n"
+                },
+                {
+                    "date": 1663916616572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,10 +35,9 @@\n           {\n \n          taskItems.map((item , index) => {\n \n-            return \n-            <TouchableOpacity  key={index} onPress={()=>completeTask()}> \n+            return <TouchableOpacity  key={index} onPress={()=>completeTask()}> \n \n                <Task text={item} />\n \n             </TouchableOpacity>\n"
+                },
+                {
+                    "date": 1663916677315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           {\n \n          taskItems.map((item , index) => {\n \n-            return <TouchableOpacity  key={index} onPress={()=>completeTask()}> \n+            return <TouchableOpacity  key={index} onPress={() => completeTask()}> \n \n                <Task text={item} />\n \n             </TouchableOpacity>\n"
+                },
+                {
+                    "date": 1663916691997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n           {\n \n          taskItems.map((item , index) => {\n \n-            return <TouchableOpacity  key={index} onPress={() => completeTask()}> \n+            return <TouchableOpacity  key={index} onPress={() => completeTask(index)}> \n \n                <Task text={item} />\n \n             </TouchableOpacity>\n"
+                },
+                {
+                    "date": 1663916863421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,19 +31,21 @@\n       <View style={styles.tasksWrapper}>\n \n         <Text style={styles.sectionTitle}> Today's Tasks</Text>\n         <View style={styles.items}>\n-          {\n+          <ScrollView>\n+            {\n \n-         taskItems.map((item , index) => {\n+              taskItems.map((item, index) => {\n \n-            return <TouchableOpacity  key={index} onPress={() => completeTask(index)}> \n+                return <TouchableOpacity key={index} onPress={() => completeTask(index)}>\n \n-               <Task text={item} />\n+                  <Task text={item} />\n \n-            </TouchableOpacity>\n-        })\n-      }\n+                </TouchableOpacity>\n+              })\n+            }\n+          </ScrollView>\n \n         </View>\n       </View>\n \n"
+                },
+                {
+                    "date": 1663916887344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { StatusBar } from 'expo-status-bar';\n import { useState } from 'react';\n-import { Keyboard, KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';\n+import { Keyboard, KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView } from 'react-native';\n import Task from './components/Task';\n \n export default function App() {\n   const [task, setTask] = useState();\n"
+                },
+                {
+                    "date": 1663917111079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,8 +76,9 @@\n   },\n   tasksWrapper: {\n     paddingTop: 80,\n     paddingHorizontal: 20,\n+    height: '70%',\n \n   },\n   sectionTitle: {\n     fontSize: 24,\n"
+                },
+                {
+                    "date": 1663917137778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n   },\n   tasksWrapper: {\n     paddingTop: 80,\n     paddingHorizontal: 20,\n-    height: '70%',\n+    height: '90%',\n \n   },\n   sectionTitle: {\n     fontSize: 24,\n"
+                },
+                {
+                    "date": 1663917145795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n   },\n   tasksWrapper: {\n     paddingTop: 80,\n     paddingHorizontal: 20,\n-    height: '90%',\n+    height: '80%',\n \n   },\n   sectionTitle: {\n     fontSize: 24,\n"
+                },
+                {
+                    "date": 1663917162101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n   },\n   tasksWrapper: {\n     paddingTop: 80,\n     paddingHorizontal: 20,\n-    height: '80%',\n+    height: '75%',\n \n   },\n   sectionTitle: {\n     fontSize: 24,\n"
+                },
+                {
+                    "date": 1663917179161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n   },\n   tasksWrapper: {\n     paddingTop: 80,\n     paddingHorizontal: 20,\n-    height: '75%',\n+    height: '78%',\n \n   },\n   sectionTitle: {\n     fontSize: 24,\n"
+                },
+                {
+                    "date": 1663917188537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n   },\n   tasksWrapper: {\n     paddingTop: 80,\n     paddingHorizontal: 20,\n-    height: '78%',\n+    height: '77%',\n \n   },\n   sectionTitle: {\n     fontSize: 24,\n"
+                },
+                {
+                    "date": 1663917236641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n   },\n   tasksWrapper: {\n     paddingTop: 80,\n     paddingHorizontal: 20,\n-    height: '77%',\n+    height: '50%',\n \n   },\n   sectionTitle: {\n     fontSize: 24,\n"
+                },
+                {
+                    "date": 1663917250282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n   },\n   tasksWrapper: {\n     paddingTop: 80,\n     paddingHorizontal: 20,\n-    height: '50%',\n+    height: '60%',\n \n   },\n   sectionTitle: {\n     fontSize: 24,\n"
+                },
+                {
+                    "date": 1663925300924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,14 +7,22 @@\n   const [task, setTask] = useState();\n   const [taskItems, setTaskItems] = useState([]);\n \n   const handleAddTask = () => {\n-\n     Keyboard.dismiss();\n \n     // console.log(task)\n     setTaskItems([...taskItems, task])\n     setTask(null);\n+    <Menu\n+      visible={visible}\n+      onDismiss={closeMenu}\n+      anchor={{ x: windowWidth, y: 100 }}>\n+      <Menu.Item onPress={() => { }} title=\"Item 1\" />\n+      <Menu.Item onPress={() => { }} title=\"Item 2\" />\n+      <Divider />\n+      <Menu.Item onPress={() => { }} title=\"Item 3\" />\n+    </Menu\n \n   }\n \n   const completeTask = (index) => {\n"
+                },
+                {
+                    "date": 1663925310667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       <Menu.Item onPress={() => { }} title=\"Item 1\" />\n       <Menu.Item onPress={() => { }} title=\"Item 2\" />\n       <Divider />\n       <Menu.Item onPress={() => { }} title=\"Item 3\" />\n-    </Menu\n+    </Menu>\n \n   }\n \n   const completeTask = (index) => {\n"
+                },
+                {
+                    "date": 1663925433846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { StatusBar } from 'expo-status-bar';\n import { useState } from 'react';\n-import { Keyboard, KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView } from 'react-native';\n+import { Keyboard, KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView, Menu } from 'react-native';\n import Task from './components/Task';\n \n export default function App() {\n   const [task, setTask] = useState();\n"
+                },
+                {
+                    "date": 1663926607689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { StatusBar } from 'expo-status-bar';\n import { useState } from 'react';\n-import { Keyboard, KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView, Menu } from 'react-native';\n+import { Keyboard, KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView } from 'react-native';\n import Task from './components/Task';\n \n export default function App() {\n   const [task, setTask] = useState();\n@@ -12,17 +12,9 @@\n \n     // console.log(task)\n     setTaskItems([...taskItems, task])\n     setTask(null);\n-    <Menu\n-      visible={visible}\n-      onDismiss={closeMenu}\n-      anchor={{ x: windowWidth, y: 100 }}>\n-      <Menu.Item onPress={() => { }} title=\"Item 1\" />\n-      <Menu.Item onPress={() => { }} title=\"Item 2\" />\n-      <Divider />\n-      <Menu.Item onPress={() => { }} title=\"Item 3\" />\n-    </Menu>\n+    \n \n   }\n \n   const completeTask = (index) => {\n"
+                }
+            ],
+            "date": 1663845356626,
+            "name": "Commit-0",
+            "content": "import { StatusBar } from 'expo-status-bar';\nimport { StyleSheet, Text, View } from 'react-native';\n\nexport default function App() {\n  return (\n    <View style={styles.container}>\n      <Text>Open up App.js to start working oszsssan your app!</Text>\n      <StatusBar style=\"auto\" />\n    </View>\n  );\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    backgroundColor: '#fff',\n    alignItems: 'center',\n    justifyContent: 'center',\n  },\n});\n"
+        }
+    ]
+}
